@@ -50,7 +50,7 @@ public class PrivateDispatchHandler implements PrivateHandler, Component
                 PublicPacket destPacket = packet.toPublic();
                 userChannel.writeAndFlush(destPacket);
             } else {
-                LOG.warn("玩家id {} 的连接已断开", packet.uid);
+                LOG.warn("Lose connection with user {}, can not forwarding response packet", packet.uid);
             }
         }
     }

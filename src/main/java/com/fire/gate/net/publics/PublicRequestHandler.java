@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 客户端与服务器通信
+ * 客户端与服务器通信根据类型进行转发
  * 
  * @author lhl
  *
@@ -18,5 +18,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PublicRequestHandler {
+    /** 指令类型 */
     byte type();
 }

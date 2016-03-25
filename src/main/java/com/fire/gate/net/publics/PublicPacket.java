@@ -12,7 +12,7 @@ import com.google.protobuf.GeneratedMessage.Builder;
  * <p>
  * 网络协议结构<br>
  * ++++++++++++++++++++++++<br>
- * 分隔符 + 包长 + 指令 + 指令类型 + 包体<br>
+ * 分隔符 + 整包长 + 指令 + 指令类型 + 包体<br>
  * short + short+short+short + long + byte[]<br>
  * ++++++++++++++++++++++++<br>
  * 

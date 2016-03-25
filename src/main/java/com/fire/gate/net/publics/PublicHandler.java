@@ -14,5 +14,10 @@ import io.netty.channel.Channel;
  */
 public interface PublicHandler
 {
+    /**
+     * 
+     * @param channel
+     * @param packet
+     */
     void handle(Channel channel, PublicPacket packet);
 }

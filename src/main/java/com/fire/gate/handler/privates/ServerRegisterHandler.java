@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fire.gate.ServerManager;
-import com.fire.gate.handler.privates.ServerRegister.C2S_ServerRegister;
+import com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister;
 import com.fire.gate.net.privates.PrivateHandler;
 import com.fire.gate.net.privates.PrivatePacket;
 import com.fire.gate.net.privates.PrivateRequestHandler;
@@ -24,7 +24,7 @@ import io.netty.channel.Channel;
 @PrivateRequestHandler(code = 100)
 public class ServerRegisterHandler implements PrivateHandler
 {
-    private static final Logger LOG = LoggerFactory.getLogger(ServerRegister.class);
+    private static final Logger LOG = LoggerFactory.getLogger(ServerRegisterHandler.class);
 
     @Override
     public void handle(Channel channel, PrivatePacket packet) {
