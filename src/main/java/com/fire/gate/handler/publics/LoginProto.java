@@ -3,8 +3,8 @@
 
 package com.fire.gate.handler.publics;
 
-public final class Login {
-  private Login() {}
+public final class LoginProto {
+  private LoginProto() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistry registry) {
   }
@@ -39,12 +39,12 @@ public final class Login {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.fire.gate.handler.publics.Login.internal_static_C2S_Login_descriptor;
+      return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.fire.gate.handler.publics.Login.internal_static_C2S_Login_fieldAccessorTable;
+      return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_fieldAccessorTable;
     }
     
     private int bitField0_;
@@ -171,41 +171,41 @@ public final class Login {
       return super.writeReplace();
     }
     
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(byte[] data)
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(java.io.InputStream input)
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseDelimitedFrom(java.io.InputStream input)
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -214,7 +214,7 @@ public final class Login {
         return null;
       }
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseDelimitedFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -225,12 +225,12 @@ public final class Login {
         return null;
       }
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.C2S_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -240,7 +240,7 @@ public final class Login {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.fire.gate.handler.publics.Login.C2S_Login prototype) {
+    public static Builder newBuilder(com.fire.gate.handler.publics.LoginProto.C2S_Login prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -253,18 +253,18 @@ public final class Login {
     }
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.fire.gate.handler.publics.Login.C2S_LoginOrBuilder {
+       implements com.fire.gate.handler.publics.LoginProto.C2S_LoginOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.fire.gate.handler.publics.Login.internal_static_C2S_Login_descriptor;
+        return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.fire.gate.handler.publics.Login.internal_static_C2S_Login_fieldAccessorTable;
+        return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_fieldAccessorTable;
       }
       
-      // Construct using com.fire.gate.handler.publics.Login.C2S_Login.newBuilder()
+      // Construct using com.fire.gate.handler.publics.LoginProto.C2S_Login.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -296,24 +296,24 @@ public final class Login {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.fire.gate.handler.publics.Login.C2S_Login.getDescriptor();
+        return com.fire.gate.handler.publics.LoginProto.C2S_Login.getDescriptor();
       }
       
-      public com.fire.gate.handler.publics.Login.C2S_Login getDefaultInstanceForType() {
-        return com.fire.gate.handler.publics.Login.C2S_Login.getDefaultInstance();
+      public com.fire.gate.handler.publics.LoginProto.C2S_Login getDefaultInstanceForType() {
+        return com.fire.gate.handler.publics.LoginProto.C2S_Login.getDefaultInstance();
       }
       
-      public com.fire.gate.handler.publics.Login.C2S_Login build() {
-        com.fire.gate.handler.publics.Login.C2S_Login result = buildPartial();
+      public com.fire.gate.handler.publics.LoginProto.C2S_Login build() {
+        com.fire.gate.handler.publics.LoginProto.C2S_Login result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
       
-      private com.fire.gate.handler.publics.Login.C2S_Login buildParsed()
+      private com.fire.gate.handler.publics.LoginProto.C2S_Login buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
-        com.fire.gate.handler.publics.Login.C2S_Login result = buildPartial();
+        com.fire.gate.handler.publics.LoginProto.C2S_Login result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
             result).asInvalidProtocolBufferException();
@@ -321,8 +321,8 @@ public final class Login {
         return result;
       }
       
-      public com.fire.gate.handler.publics.Login.C2S_Login buildPartial() {
-        com.fire.gate.handler.publics.Login.C2S_Login result = new com.fire.gate.handler.publics.Login.C2S_Login(this);
+      public com.fire.gate.handler.publics.LoginProto.C2S_Login buildPartial() {
+        com.fire.gate.handler.publics.LoginProto.C2S_Login result = new com.fire.gate.handler.publics.LoginProto.C2S_Login(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -339,16 +339,16 @@ public final class Login {
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.fire.gate.handler.publics.Login.C2S_Login) {
-          return mergeFrom((com.fire.gate.handler.publics.Login.C2S_Login)other);
+        if (other instanceof com.fire.gate.handler.publics.LoginProto.C2S_Login) {
+          return mergeFrom((com.fire.gate.handler.publics.LoginProto.C2S_Login)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.fire.gate.handler.publics.Login.C2S_Login other) {
-        if (other == com.fire.gate.handler.publics.Login.C2S_Login.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.fire.gate.handler.publics.LoginProto.C2S_Login other) {
+        if (other == com.fire.gate.handler.publics.LoginProto.C2S_Login.getDefaultInstance()) return this;
         if (other.hasAccount()) {
           setAccount(other.getAccount());
         }
@@ -524,12 +524,12 @@ public final class Login {
     
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.fire.gate.handler.publics.Login.internal_static_S2C_Login_descriptor;
+      return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_descriptor;
     }
     
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.fire.gate.handler.publics.Login.internal_static_S2C_Login_fieldAccessorTable;
+      return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_fieldAccessorTable;
     }
     
     private int bitField0_;
@@ -630,41 +630,41 @@ public final class Login {
       return super.writeReplace();
     }
     
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(byte[] data)
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(java.io.InputStream input)
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseDelimitedFrom(java.io.InputStream input)
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input)) {
@@ -673,7 +673,7 @@ public final class Login {
         return null;
       }
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseDelimitedFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -684,12 +684,12 @@ public final class Login {
         return null;
       }
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
-    public static com.fire.gate.handler.publics.Login.S2C_Login parseFrom(
+    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -699,7 +699,7 @@ public final class Login {
     
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.fire.gate.handler.publics.Login.S2C_Login prototype) {
+    public static Builder newBuilder(com.fire.gate.handler.publics.LoginProto.S2C_Login prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -712,18 +712,18 @@ public final class Login {
     }
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.fire.gate.handler.publics.Login.S2C_LoginOrBuilder {
+       implements com.fire.gate.handler.publics.LoginProto.S2C_LoginOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.fire.gate.handler.publics.Login.internal_static_S2C_Login_descriptor;
+        return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_descriptor;
       }
       
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.fire.gate.handler.publics.Login.internal_static_S2C_Login_fieldAccessorTable;
+        return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_fieldAccessorTable;
       }
       
-      // Construct using com.fire.gate.handler.publics.Login.S2C_Login.newBuilder()
+      // Construct using com.fire.gate.handler.publics.LoginProto.S2C_Login.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -755,24 +755,24 @@ public final class Login {
       
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.fire.gate.handler.publics.Login.S2C_Login.getDescriptor();
+        return com.fire.gate.handler.publics.LoginProto.S2C_Login.getDescriptor();
       }
       
-      public com.fire.gate.handler.publics.Login.S2C_Login getDefaultInstanceForType() {
-        return com.fire.gate.handler.publics.Login.S2C_Login.getDefaultInstance();
+      public com.fire.gate.handler.publics.LoginProto.S2C_Login getDefaultInstanceForType() {
+        return com.fire.gate.handler.publics.LoginProto.S2C_Login.getDefaultInstance();
       }
       
-      public com.fire.gate.handler.publics.Login.S2C_Login build() {
-        com.fire.gate.handler.publics.Login.S2C_Login result = buildPartial();
+      public com.fire.gate.handler.publics.LoginProto.S2C_Login build() {
+        com.fire.gate.handler.publics.LoginProto.S2C_Login result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
       
-      private com.fire.gate.handler.publics.Login.S2C_Login buildParsed()
+      private com.fire.gate.handler.publics.LoginProto.S2C_Login buildParsed()
           throws com.google.protobuf.InvalidProtocolBufferException {
-        com.fire.gate.handler.publics.Login.S2C_Login result = buildPartial();
+        com.fire.gate.handler.publics.LoginProto.S2C_Login result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
             result).asInvalidProtocolBufferException();
@@ -780,8 +780,8 @@ public final class Login {
         return result;
       }
       
-      public com.fire.gate.handler.publics.Login.S2C_Login buildPartial() {
-        com.fire.gate.handler.publics.Login.S2C_Login result = new com.fire.gate.handler.publics.Login.S2C_Login(this);
+      public com.fire.gate.handler.publics.LoginProto.S2C_Login buildPartial() {
+        com.fire.gate.handler.publics.LoginProto.S2C_Login result = new com.fire.gate.handler.publics.LoginProto.S2C_Login(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -798,16 +798,16 @@ public final class Login {
       }
       
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.fire.gate.handler.publics.Login.S2C_Login) {
-          return mergeFrom((com.fire.gate.handler.publics.Login.S2C_Login)other);
+        if (other instanceof com.fire.gate.handler.publics.LoginProto.S2C_Login) {
+          return mergeFrom((com.fire.gate.handler.publics.LoginProto.S2C_Login)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
       
-      public Builder mergeFrom(com.fire.gate.handler.publics.Login.S2C_Login other) {
-        if (other == com.fire.gate.handler.publics.Login.S2C_Login.getDefaultInstance()) return this;
+      public Builder mergeFrom(com.fire.gate.handler.publics.LoginProto.S2C_Login other) {
+        if (other == com.fire.gate.handler.publics.LoginProto.S2C_Login.getDefaultInstance()) return this;
         if (other.hasIsOk()) {
           setIsOk(other.getIsOk());
         }
@@ -954,8 +954,8 @@ public final class Login {
     java.lang.String[] descriptorData = {
       "\n\013Login.proto\"+\n\tC2S_Login\022\017\n\007account\030\001 " +
       "\002(\t\022\r\n\005token\030\002 \002(\t\"*\n\tS2C_Login\022\014\n\004isOk\030" +
-      "\001 \002(\010\022\017\n\007message\030\002 \001(\tB&\n\035com.fire.gate." +
-      "handler.publicsB\005Login"
+      "\001 \002(\010\022\017\n\007message\030\002 \001(\tB+\n\035com.fire.gate." +
+      "handler.publicsB\nLoginProto"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -968,16 +968,16 @@ public final class Login {
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_C2S_Login_descriptor,
               new java.lang.String[] { "Account", "Token", },
-              com.fire.gate.handler.publics.Login.C2S_Login.class,
-              com.fire.gate.handler.publics.Login.C2S_Login.Builder.class);
+              com.fire.gate.handler.publics.LoginProto.C2S_Login.class,
+              com.fire.gate.handler.publics.LoginProto.C2S_Login.Builder.class);
           internal_static_S2C_Login_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_S2C_Login_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_S2C_Login_descriptor,
               new java.lang.String[] { "IsOk", "Message", },
-              com.fire.gate.handler.publics.Login.S2C_Login.class,
-              com.fire.gate.handler.publics.Login.S2C_Login.Builder.class);
+              com.fire.gate.handler.publics.LoginProto.S2C_Login.class,
+              com.fire.gate.handler.publics.LoginProto.S2C_Login.Builder.class);
           return null;
         }
       };

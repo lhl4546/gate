@@ -1,5 +1,5 @@
 option java_package = "com.fire.gate.handler.publics";
-option java_outer_classname = "Login";
+option java_outer_classname = "LoginProto";
 
 // C-S 1000
 message C2S_Login

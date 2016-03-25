@@ -1,5 +1,5 @@
 option java_package = "com.fire.gate.handler.privates";
-option java_outer_classname = "ServerRegister";
+option java_outer_classname = "ServerRegisterProto";
 
 // C-S 100
 message C2S_ServerRegister
