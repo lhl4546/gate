@@ -1,0 +1,14 @@
+option java_package = "com.fire.gate.handler.privates";
+option java_outer_classname = "ServerRegister";
+
+// C-S 100
+message C2S_ServerRegister
+{
+	required int32 serverType = 1;
+	required int32 serverId = 2;
+}
+
+// S-C 100
+message S2C_ServerRegister
+{
+}

@@ -1,0 +1,16 @@
+option java_package = "com.fire.gate.handler.publics";
+option java_outer_classname = "Login";
+
+// C-S 1000
+message C2S_Login
+{
+	required string account = 1;
+	required string token = 2;
+}
+
+// S-C 1000
+message S2C_Login
+{
+	required bool isOk = 1;
+	optional string message = 2;
+}
