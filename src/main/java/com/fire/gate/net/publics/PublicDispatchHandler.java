@@ -36,9 +36,6 @@ public final class PublicDispatchHandler implements PublicHandler, Component
         handlerMap = new HashMap<>();
     }
 
-    /**
-     * 该方法将在Netty I/O线程池中运行
-     */
     @Override
     public void handle(Channel channel, PublicPacket packet) {
         PublicHandler handler = handlerMap.get(Byte.valueOf(packet.type));

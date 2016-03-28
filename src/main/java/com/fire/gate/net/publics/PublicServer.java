@@ -42,7 +42,7 @@ public class PublicServer implements Component
      * @param dispatcher 消息派发处理器
      */
     public PublicServer(PublicDispatchHandler dispatcher) {
-        this.port = Config.getInt("TCP_PORT");
+        this.port = Config.getInt("PUBLIC_PORT");
         this.bootstrap = new ServerBootstrap();
         this.bossgroup = new NioEventLoopGroup(1, new NamedThreadFactory("ACCEPTOR"));
         int netiothreads = Runtime.getRuntime().availableProcessors();
@@ -57,7 +57,7 @@ public class PublicServer implements Component
                 .childOption(ChannelOption.TCP_NODELAY, true);
         ChannelFuture future = bootstrap.bind(port);
         serverSocket = future.sync().channel();
-        LOG.debug("NettyServer start listen on port {}", port);
+        LOG.debug("PublicServer start listen on port {}", port);
     }
 
     private ChannelInitializer<Channel> getInitializer() {
@@ -75,6 +75,6 @@ public class PublicServer implements Component
         if (childgroup != null) {
             childgroup.shutdownGracefully();
         }
-        LOG.debug("NettyServer stop");
+        LOG.debug("PublicServer stop");
     }
 }

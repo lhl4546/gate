@@ -3,989 +3,1013 @@
 
 package com.fire.gate.handler.publics;
 
-public final class LoginProto {
-  private LoginProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-  }
-  public interface C2S_LoginOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required string account = 1;
-    boolean hasAccount();
-    String getAccount();
-    
-    // required string token = 2;
-    boolean hasToken();
-    String getToken();
-  }
-  public static final class C2S_Login extends
-      com.google.protobuf.GeneratedMessage
-      implements C2S_LoginOrBuilder {
-    // Use C2S_Login.newBuilder() to construct.
-    private C2S_Login(Builder builder) {
-      super(builder);
+public final class LoginProto
+{
+    private LoginProto() {
     }
-    private C2S_Login(boolean noInit) {}
-    
-    private static final C2S_Login defaultInstance;
-    public static C2S_Login getDefaultInstance() {
-      return defaultInstance;
+
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
     }
-    
-    public C2S_Login getDefaultInstanceForType() {
-      return defaultInstance;
+
+    public interface C2S_LoginOrBuilder extends com.google.protobuf.MessageOrBuilder
+    {
+
+        // required string account = 1;
+        boolean hasAccount();
+
+        String getAccount();
+
+        // required string token = 2;
+        boolean hasToken();
+
+        String getToken();
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // required string account = 1;
-    public static final int ACCOUNT_FIELD_NUMBER = 1;
-    private java.lang.Object account_;
-    public boolean hasAccount() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public String getAccount() {
-      java.lang.Object ref = account_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          account_ = s;
+
+    public static final class C2S_Login extends com.google.protobuf.GeneratedMessage implements C2S_LoginOrBuilder
+    {
+        // Use C2S_Login.newBuilder() to construct.
+        private C2S_Login(Builder builder) {
+            super(builder);
         }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getAccountBytes() {
-      java.lang.Object ref = account_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        account_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    // required string token = 2;
-    public static final int TOKEN_FIELD_NUMBER = 2;
-    private java.lang.Object token_;
-    public boolean hasToken() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public String getToken() {
-      java.lang.Object ref = token_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          token_ = s;
+
+        private C2S_Login(boolean noInit) {
         }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getTokenBytes() {
-      java.lang.Object ref = token_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        token_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    private void initFields() {
-      account_ = "";
-      token_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      if (!hasAccount()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasToken()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+
+        private static final C2S_Login defaultInstance;
+
+        public static C2S_Login getDefaultInstance() {
+            return defaultInstance;
+        }
+
+        public C2S_Login getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+            return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_fieldAccessorTable;
+        }
+
+        private int bitField0_;
+        // required string account = 1;
+        public static final int ACCOUNT_FIELD_NUMBER = 1;
+        private java.lang.Object account_;
+
+        public boolean hasAccount() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        public String getAccount() {
+            java.lang.Object ref = account_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+                    account_ = s;
+                }
+                return s;
+            }
+        }
+
+        private com.google.protobuf.ByteString getAccountBytes() {
+            java.lang.Object ref = account_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+                account_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        // required string token = 2;
+        public static final int TOKEN_FIELD_NUMBER = 2;
+        private java.lang.Object token_;
+
+        public boolean hasToken() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        public String getToken() {
+            java.lang.Object ref = token_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+                    token_ = s;
+                }
+                return s;
+            }
+        }
+
+        private com.google.protobuf.ByteString getTokenBytes() {
+            java.lang.Object ref = token_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+                token_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private void initFields() {
+            account_ = "";
+            token_ = "";
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized != -1)
+                return isInitialized == 1;
+
+            if (!hasAccount()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasToken()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeBytes(1, getAccountBytes());
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeBytes(2, getTokenBytes());
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(1, getAccountBytes());
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, getTokenBytes());
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+
+        @java.lang.Override
+        protected java.lang.Object writeReplace() throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseDelimitedFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
                         throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getAccountBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getTokenBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getAccountBytes());
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getTokenBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-    
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.C2S_Login parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.fire.gate.handler.publics.LoginProto.C2S_Login prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.fire.gate.handler.publics.LoginProto.C2S_LoginOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_fieldAccessorTable;
-      }
-      
-      // Construct using com.fire.gate.handler.publics.LoginProto.C2S_Login.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        account_ = "";
-        bitField0_ = (bitField0_ & ~0x00000001);
-        token_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.fire.gate.handler.publics.LoginProto.C2S_Login.getDescriptor();
-      }
-      
-      public com.fire.gate.handler.publics.LoginProto.C2S_Login getDefaultInstanceForType() {
-        return com.fire.gate.handler.publics.LoginProto.C2S_Login.getDefaultInstance();
-      }
-      
-      public com.fire.gate.handler.publics.LoginProto.C2S_Login build() {
-        com.fire.gate.handler.publics.LoginProto.C2S_Login result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+
+        public static Builder newBuilder() {
+            return Builder.create();
         }
-        return result;
-      }
-      
-      private com.fire.gate.handler.publics.LoginProto.C2S_Login buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.fire.gate.handler.publics.LoginProto.C2S_Login result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
+
+        public Builder newBuilderForType() {
+            return newBuilder();
         }
-        return result;
-      }
-      
-      public com.fire.gate.handler.publics.LoginProto.C2S_Login buildPartial() {
-        com.fire.gate.handler.publics.LoginProto.C2S_Login result = new com.fire.gate.handler.publics.LoginProto.C2S_Login(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
+
+        public static Builder newBuilder(com.fire.gate.handler.publics.LoginProto.C2S_Login prototype) {
+            return newBuilder().mergeFrom(prototype);
         }
-        result.account_ = account_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
+
+        public Builder toBuilder() {
+            return newBuilder(this);
         }
-        result.token_ = token_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.fire.gate.handler.publics.LoginProto.C2S_Login) {
-          return mergeFrom((com.fire.gate.handler.publics.LoginProto.C2S_Login)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
         }
-      }
-      
-      public Builder mergeFrom(com.fire.gate.handler.publics.LoginProto.C2S_Login other) {
-        if (other == com.fire.gate.handler.publics.LoginProto.C2S_Login.getDefaultInstance()) return this;
-        if (other.hasAccount()) {
-          setAccount(other.getAccount());
-        }
-        if (other.hasToken()) {
-          setToken(other.getToken());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        if (!hasAccount()) {
-          
-          return false;
-        }
-        if (!hasToken()) {
-          
-          return false;
-        }
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
+
+        public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
+                implements com.fire.gate.handler.publics.LoginProto.C2S_LoginOrBuilder
+        {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+                return com.fire.gate.handler.publics.LoginProto.internal_static_C2S_Login_fieldAccessorTable;
+            }
+
+            // Construct using
+            // com.fire.gate.handler.publics.LoginProto.C2S_Login.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            public Builder clear() {
+                super.clear();
+                account_ = "";
+                bitField0_ = (bitField0_ & ~0x00000001);
+                token_ = "";
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return com.fire.gate.handler.publics.LoginProto.C2S_Login.getDescriptor();
+            }
+
+            public com.fire.gate.handler.publics.LoginProto.C2S_Login getDefaultInstanceForType() {
+                return com.fire.gate.handler.publics.LoginProto.C2S_Login.getDefaultInstance();
+            }
+
+            public com.fire.gate.handler.publics.LoginProto.C2S_Login build() {
+                com.fire.gate.handler.publics.LoginProto.C2S_Login result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            private com.fire.gate.handler.publics.LoginProto.C2S_Login buildParsed()
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                com.fire.gate.handler.publics.LoginProto.C2S_Login result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result).asInvalidProtocolBufferException();
+                }
+                return result;
+            }
+
+            public com.fire.gate.handler.publics.LoginProto.C2S_Login buildPartial() {
+                com.fire.gate.handler.publics.LoginProto.C2S_Login result = new com.fire.gate.handler.publics.LoginProto.C2S_Login(
+                        this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.account_ = account_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.token_ = token_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.fire.gate.handler.publics.LoginProto.C2S_Login) {
+                    return mergeFrom((com.fire.gate.handler.publics.LoginProto.C2S_Login) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.fire.gate.handler.publics.LoginProto.C2S_Login other) {
+                if (other == com.fire.gate.handler.publics.LoginProto.C2S_Login.getDefaultInstance())
+                    return this;
+                if (other.hasAccount()) {
+                    setAccount(other.getAccount());
+                }
+                if (other.hasToken()) {
+                    setToken(other.getToken());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasAccount()) {
+
+                    return false;
+                }
+                if (!hasToken()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                        .newBuilder(this.getUnknownFields());
+                while (true) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        this.setUnknownFields(unknownFields.build());
+                        onChanged();
+                        return this;
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            this.setUnknownFields(unknownFields.build());
+                            onChanged();
+                            return this;
+                        }
+                        break;
+                    }
+                    case 10: {
+                        bitField0_ |= 0x00000001;
+                        account_ = input.readBytes();
+                        break;
+                    }
+                    case 18: {
+                        bitField0_ |= 0x00000002;
+                        token_ = input.readBytes();
+                        break;
+                    }
+                    }
+                }
+            }
+
+            private int bitField0_;
+
+            // required string account = 1;
+            private java.lang.Object account_ = "";
+
+            public boolean hasAccount() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            public String getAccount() {
+                java.lang.Object ref = account_;
+                if (!(ref instanceof String)) {
+                    String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+                    account_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            public Builder setAccount(String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000001;
+                account_ = value;
                 onChanged();
                 return this;
-              }
-              break;
             }
-            case 10: {
-              bitField0_ |= 0x00000001;
-              account_ = input.readBytes();
-              break;
-            }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              token_ = input.readBytes();
-              break;
-            }
-          }
-        }
-      }
-      
-      private int bitField0_;
-      
-      // required string account = 1;
-      private java.lang.Object account_ = "";
-      public boolean hasAccount() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public String getAccount() {
-        java.lang.Object ref = account_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          account_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setAccount(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000001;
-        account_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearAccount() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        account_ = getDefaultInstance().getAccount();
-        onChanged();
-        return this;
-      }
-      void setAccount(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000001;
-        account_ = value;
-        onChanged();
-      }
-      
-      // required string token = 2;
-      private java.lang.Object token_ = "";
-      public boolean hasToken() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public String getToken() {
-        java.lang.Object ref = token_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          token_ = s;
-          return s;
-        } else {
-          return (String) ref;
-        }
-      }
-      public Builder setToken(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        token_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearToken() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        token_ = getDefaultInstance().getToken();
-        onChanged();
-        return this;
-      }
-      void setToken(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
-        token_ = value;
-        onChanged();
-      }
-      
-      // @@protoc_insertion_point(builder_scope:C2S_Login)
-    }
-    
-    static {
-      defaultInstance = new C2S_Login(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:C2S_Login)
-  }
-  
-  public interface S2C_LoginOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required bool isOk = 1;
-    boolean hasIsOk();
-    boolean getIsOk();
-    
-    // optional string message = 2;
-    boolean hasMessage();
-    String getMessage();
-  }
-  public static final class S2C_Login extends
-      com.google.protobuf.GeneratedMessage
-      implements S2C_LoginOrBuilder {
-    // Use S2C_Login.newBuilder() to construct.
-    private S2C_Login(Builder builder) {
-      super(builder);
-    }
-    private S2C_Login(boolean noInit) {}
-    
-    private static final S2C_Login defaultInstance;
-    public static S2C_Login getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public S2C_Login getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // required bool isOk = 1;
-    public static final int ISOK_FIELD_NUMBER = 1;
-    private boolean isOk_;
-    public boolean hasIsOk() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public boolean getIsOk() {
-      return isOk_;
-    }
-    
-    // optional string message = 2;
-    public static final int MESSAGE_FIELD_NUMBER = 2;
-    private java.lang.Object message_;
-    public boolean hasMessage() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public String getMessage() {
-      java.lang.Object ref = message_;
-      if (ref instanceof String) {
-        return (String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          message_ = s;
-        }
-        return s;
-      }
-    }
-    private com.google.protobuf.ByteString getMessageBytes() {
-      java.lang.Object ref = message_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        message_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    
-    private void initFields() {
-      isOk_ = false;
-      message_ = "";
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      if (!hasIsOk()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBool(1, isOk_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeBytes(2, getMessageBytes());
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(1, isOk_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(2, getMessageBytes());
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-    
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.fire.gate.handler.publics.LoginProto.S2C_Login prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.fire.gate.handler.publics.LoginProto.S2C_LoginOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_fieldAccessorTable;
-      }
-      
-      // Construct using com.fire.gate.handler.publics.LoginProto.S2C_Login.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        isOk_ = false;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        message_ = "";
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.fire.gate.handler.publics.LoginProto.S2C_Login.getDescriptor();
-      }
-      
-      public com.fire.gate.handler.publics.LoginProto.S2C_Login getDefaultInstanceForType() {
-        return com.fire.gate.handler.publics.LoginProto.S2C_Login.getDefaultInstance();
-      }
-      
-      public com.fire.gate.handler.publics.LoginProto.S2C_Login build() {
-        com.fire.gate.handler.publics.LoginProto.S2C_Login result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private com.fire.gate.handler.publics.LoginProto.S2C_Login buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.fire.gate.handler.publics.LoginProto.S2C_Login result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.fire.gate.handler.publics.LoginProto.S2C_Login buildPartial() {
-        com.fire.gate.handler.publics.LoginProto.S2C_Login result = new com.fire.gate.handler.publics.LoginProto.S2C_Login(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
-        }
-        result.isOk_ = isOk_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
-        }
-        result.message_ = message_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.fire.gate.handler.publics.LoginProto.S2C_Login) {
-          return mergeFrom((com.fire.gate.handler.publics.LoginProto.S2C_Login)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(com.fire.gate.handler.publics.LoginProto.S2C_Login other) {
-        if (other == com.fire.gate.handler.publics.LoginProto.S2C_Login.getDefaultInstance()) return this;
-        if (other.hasIsOk()) {
-          setIsOk(other.getIsOk());
-        }
-        if (other.hasMessage()) {
-          setMessage(other.getMessage());
-        }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        if (!hasIsOk()) {
-          
-          return false;
-        }
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
+
+            public Builder clearAccount() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                account_ = getDefaultInstance().getAccount();
                 onChanged();
                 return this;
-              }
-              break;
             }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              isOk_ = input.readBool();
-              break;
+
+            void setAccount(com.google.protobuf.ByteString value) {
+                bitField0_ |= 0x00000001;
+                account_ = value;
+                onChanged();
             }
-            case 18: {
-              bitField0_ |= 0x00000002;
-              message_ = input.readBytes();
-              break;
+
+            // required string token = 2;
+            private java.lang.Object token_ = "";
+
+            public boolean hasToken() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
             }
-          }
+
+            public String getToken() {
+                java.lang.Object ref = token_;
+                if (!(ref instanceof String)) {
+                    String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+                    token_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            public Builder setToken(String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000002;
+                token_ = value;
+                onChanged();
+                return this;
+            }
+
+            public Builder clearToken() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                token_ = getDefaultInstance().getToken();
+                onChanged();
+                return this;
+            }
+
+            void setToken(com.google.protobuf.ByteString value) {
+                bitField0_ |= 0x00000002;
+                token_ = value;
+                onChanged();
+            }
+
+            // @@protoc_insertion_point(builder_scope:C2S_Login)
         }
-      }
-      
-      private int bitField0_;
-      
-      // required bool isOk = 1;
-      private boolean isOk_ ;
-      public boolean hasIsOk() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public boolean getIsOk() {
-        return isOk_;
-      }
-      public Builder setIsOk(boolean value) {
-        bitField0_ |= 0x00000001;
-        isOk_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearIsOk() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        isOk_ = false;
-        onChanged();
-        return this;
-      }
-      
-      // optional string message = 2;
-      private java.lang.Object message_ = "";
-      public boolean hasMessage() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public String getMessage() {
-        java.lang.Object ref = message_;
-        if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          message_ = s;
-          return s;
-        } else {
-          return (String) ref;
+
+        static {
+            defaultInstance = new C2S_Login(true);
+            defaultInstance.initFields();
         }
-      }
-      public Builder setMessage(String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  bitField0_ |= 0x00000002;
-        message_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearMessage() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        message_ = getDefaultInstance().getMessage();
-        onChanged();
-        return this;
-      }
-      void setMessage(com.google.protobuf.ByteString value) {
-        bitField0_ |= 0x00000002;
-        message_ = value;
-        onChanged();
-      }
-      
-      // @@protoc_insertion_point(builder_scope:S2C_Login)
+
+        // @@protoc_insertion_point(class_scope:C2S_Login)
     }
-    
+
+    public interface S2C_LoginOrBuilder extends com.google.protobuf.MessageOrBuilder
+    {
+
+        // required bool isOk = 1;
+        boolean hasIsOk();
+
+        boolean getIsOk();
+
+        // optional string message = 2;
+        boolean hasMessage();
+
+        String getMessage();
+    }
+
+    public static final class S2C_Login extends com.google.protobuf.GeneratedMessage implements S2C_LoginOrBuilder
+    {
+        // Use S2C_Login.newBuilder() to construct.
+        private S2C_Login(Builder builder) {
+            super(builder);
+        }
+
+        private S2C_Login(boolean noInit) {
+        }
+
+        private static final S2C_Login defaultInstance;
+
+        public static S2C_Login getDefaultInstance() {
+            return defaultInstance;
+        }
+
+        public S2C_Login getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+            return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_fieldAccessorTable;
+        }
+
+        private int bitField0_;
+        // required bool isOk = 1;
+        public static final int ISOK_FIELD_NUMBER = 1;
+        private boolean isOk_;
+
+        public boolean hasIsOk() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        public boolean getIsOk() {
+            return isOk_;
+        }
+
+        // optional string message = 2;
+        public static final int MESSAGE_FIELD_NUMBER = 2;
+        private java.lang.Object message_;
+
+        public boolean hasMessage() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        public String getMessage() {
+            java.lang.Object ref = message_;
+            if (ref instanceof String) {
+                return (String) ref;
+            } else {
+                com.google.protobuf.ByteString bs = (com.google.protobuf.ByteString) ref;
+                String s = bs.toStringUtf8();
+                if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+                    message_ = s;
+                }
+                return s;
+            }
+        }
+
+        private com.google.protobuf.ByteString getMessageBytes() {
+            java.lang.Object ref = message_;
+            if (ref instanceof String) {
+                com.google.protobuf.ByteString b = com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+                message_ = b;
+                return b;
+            } else {
+                return (com.google.protobuf.ByteString) ref;
+            }
+        }
+
+        private void initFields() {
+            isOk_ = false;
+            message_ = "";
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized != -1)
+                return isInitialized == 1;
+
+            if (!hasIsOk()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeBool(1, isOk_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeBytes(2, getMessageBytes());
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream.computeBoolSize(1, isOk_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream.computeBytesSize(2, getMessageBytes());
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+
+        @java.lang.Override
+        protected java.lang.Object writeReplace() throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(com.google.protobuf.ByteString data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(com.google.protobuf.ByteString data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseDelimitedFrom(java.io.InputStream input)
+                throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseDelimitedFrom(java.io.InputStream input,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.publics.LoginProto.S2C_Login parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws java.io.IOException {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder(com.fire.gate.handler.publics.LoginProto.S2C_Login prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
+                implements com.fire.gate.handler.publics.LoginProto.S2C_LoginOrBuilder
+        {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+                return com.fire.gate.handler.publics.LoginProto.internal_static_S2C_Login_fieldAccessorTable;
+            }
+
+            // Construct using
+            // com.fire.gate.handler.publics.LoginProto.S2C_Login.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            public Builder clear() {
+                super.clear();
+                isOk_ = false;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                message_ = "";
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return com.fire.gate.handler.publics.LoginProto.S2C_Login.getDescriptor();
+            }
+
+            public com.fire.gate.handler.publics.LoginProto.S2C_Login getDefaultInstanceForType() {
+                return com.fire.gate.handler.publics.LoginProto.S2C_Login.getDefaultInstance();
+            }
+
+            public com.fire.gate.handler.publics.LoginProto.S2C_Login build() {
+                com.fire.gate.handler.publics.LoginProto.S2C_Login result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            private com.fire.gate.handler.publics.LoginProto.S2C_Login buildParsed()
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                com.fire.gate.handler.publics.LoginProto.S2C_Login result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result).asInvalidProtocolBufferException();
+                }
+                return result;
+            }
+
+            public com.fire.gate.handler.publics.LoginProto.S2C_Login buildPartial() {
+                com.fire.gate.handler.publics.LoginProto.S2C_Login result = new com.fire.gate.handler.publics.LoginProto.S2C_Login(
+                        this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.isOk_ = isOk_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.message_ = message_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.fire.gate.handler.publics.LoginProto.S2C_Login) {
+                    return mergeFrom((com.fire.gate.handler.publics.LoginProto.S2C_Login) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.fire.gate.handler.publics.LoginProto.S2C_Login other) {
+                if (other == com.fire.gate.handler.publics.LoginProto.S2C_Login.getDefaultInstance())
+                    return this;
+                if (other.hasIsOk()) {
+                    setIsOk(other.getIsOk());
+                }
+                if (other.hasMessage()) {
+                    setMessage(other.getMessage());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasIsOk()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                        .newBuilder(this.getUnknownFields());
+                while (true) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        this.setUnknownFields(unknownFields.build());
+                        onChanged();
+                        return this;
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            this.setUnknownFields(unknownFields.build());
+                            onChanged();
+                            return this;
+                        }
+                        break;
+                    }
+                    case 8: {
+                        bitField0_ |= 0x00000001;
+                        isOk_ = input.readBool();
+                        break;
+                    }
+                    case 18: {
+                        bitField0_ |= 0x00000002;
+                        message_ = input.readBytes();
+                        break;
+                    }
+                    }
+                }
+            }
+
+            private int bitField0_;
+
+            // required bool isOk = 1;
+            private boolean isOk_;
+
+            public boolean hasIsOk() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            public boolean getIsOk() {
+                return isOk_;
+            }
+
+            public Builder setIsOk(boolean value) {
+                bitField0_ |= 0x00000001;
+                isOk_ = value;
+                onChanged();
+                return this;
+            }
+
+            public Builder clearIsOk() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                isOk_ = false;
+                onChanged();
+                return this;
+            }
+
+            // optional string message = 2;
+            private java.lang.Object message_ = "";
+
+            public boolean hasMessage() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            public String getMessage() {
+                java.lang.Object ref = message_;
+                if (!(ref instanceof String)) {
+                    String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+                    message_ = s;
+                    return s;
+                } else {
+                    return (String) ref;
+                }
+            }
+
+            public Builder setMessage(String value) {
+                if (value == null) {
+                    throw new NullPointerException();
+                }
+                bitField0_ |= 0x00000002;
+                message_ = value;
+                onChanged();
+                return this;
+            }
+
+            public Builder clearMessage() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                message_ = getDefaultInstance().getMessage();
+                onChanged();
+                return this;
+            }
+
+            void setMessage(com.google.protobuf.ByteString value) {
+                bitField0_ |= 0x00000002;
+                message_ = value;
+                onChanged();
+            }
+
+            // @@protoc_insertion_point(builder_scope:S2C_Login)
+        }
+
+        static {
+            defaultInstance = new S2C_Login(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:S2C_Login)
+    }
+
+    private static com.google.protobuf.Descriptors.Descriptor internal_static_C2S_Login_descriptor;
+    private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_C2S_Login_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.Descriptor internal_static_S2C_Login_descriptor;
+    private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_S2C_Login_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
     static {
-      defaultInstance = new S2C_Login(true);
-      defaultInstance.initFields();
+        java.lang.String[] descriptorData = { "\n\013Login.proto\"+\n\tC2S_Login\022\017\n\007account\030\001 "
+                + "\002(\t\022\r\n\005token\030\002 \002(\t\"*\n\tS2C_Login\022\014\n\004isOk\030"
+                + "\001 \002(\010\022\017\n\007message\030\002 \001(\tB+\n\035com.fire.gate."
+                + "handler.publicsB\nLoginProto" };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+            public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                    com.google.protobuf.Descriptors.FileDescriptor root) {
+                descriptor = root;
+                internal_static_C2S_Login_descriptor = getDescriptor().getMessageTypes().get(0);
+                internal_static_C2S_Login_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                        internal_static_C2S_Login_descriptor, new java.lang.String[] { "Account", "Token", },
+                        com.fire.gate.handler.publics.LoginProto.C2S_Login.class,
+                        com.fire.gate.handler.publics.LoginProto.C2S_Login.Builder.class);
+                internal_static_S2C_Login_descriptor = getDescriptor().getMessageTypes().get(1);
+                internal_static_S2C_Login_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                        internal_static_S2C_Login_descriptor, new java.lang.String[] { "IsOk", "Message", },
+                        com.fire.gate.handler.publics.LoginProto.S2C_Login.class,
+                        com.fire.gate.handler.publics.LoginProto.S2C_Login.Builder.class);
+                return null;
+            }
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {}, assigner);
     }
-    
-    // @@protoc_insertion_point(class_scope:S2C_Login)
-  }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_C2S_Login_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_C2S_Login_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_S2C_Login_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_S2C_Login_fieldAccessorTable;
-  
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\013Login.proto\"+\n\tC2S_Login\022\017\n\007account\030\001 " +
-      "\002(\t\022\r\n\005token\030\002 \002(\t\"*\n\tS2C_Login\022\014\n\004isOk\030" +
-      "\001 \002(\010\022\017\n\007message\030\002 \001(\tB+\n\035com.fire.gate." +
-      "handler.publicsB\nLoginProto"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_C2S_Login_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_C2S_Login_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_C2S_Login_descriptor,
-              new java.lang.String[] { "Account", "Token", },
-              com.fire.gate.handler.publics.LoginProto.C2S_Login.class,
-              com.fire.gate.handler.publics.LoginProto.C2S_Login.Builder.class);
-          internal_static_S2C_Login_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_S2C_Login_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_S2C_Login_descriptor,
-              new java.lang.String[] { "IsOk", "Message", },
-              com.fire.gate.handler.publics.LoginProto.S2C_Login.class,
-              com.fire.gate.handler.publics.LoginProto.S2C_Login.Builder.class);
-          return null;
-        }
-      };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-  }
-  
-  // @@protoc_insertion_point(outer_class_scope)
+
+    // @@protoc_insertion_point(outer_class_scope)
 }

@@ -32,10 +32,14 @@ public class Config
     }
 
     public static int getInt(String key) {
-        return Integer.parseInt(prop.getProperty(key));
+        return Integer.parseInt(getString(key));
     }
 
     public static String getString(String key) {
+        if (prop == null) {
+            throw new IllegalStateException("Configure has not been initialized");
+        }
+
         return prop.getProperty(key);
     }
 }

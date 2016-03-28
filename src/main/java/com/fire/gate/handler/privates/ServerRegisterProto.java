@@ -3,751 +3,771 @@
 
 package com.fire.gate.handler.privates;
 
-public final class ServerRegisterProto {
-  private ServerRegisterProto() {}
-  public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
-  }
-  public interface C2S_ServerRegisterOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-    
-    // required int32 serverType = 1;
-    boolean hasServerType();
-    int getServerType();
-    
-    // required int32 serverId = 2;
-    boolean hasServerId();
-    int getServerId();
-  }
-  public static final class C2S_ServerRegister extends
-      com.google.protobuf.GeneratedMessage
-      implements C2S_ServerRegisterOrBuilder {
-    // Use C2S_ServerRegister.newBuilder() to construct.
-    private C2S_ServerRegister(Builder builder) {
-      super(builder);
+public final class ServerRegisterProto
+{
+    private ServerRegisterProto() {
     }
-    private C2S_ServerRegister(boolean noInit) {}
-    
-    private static final C2S_ServerRegister defaultInstance;
-    public static C2S_ServerRegister getDefaultInstance() {
-      return defaultInstance;
+
+    public static void registerAllExtensions(com.google.protobuf.ExtensionRegistry registry) {
     }
-    
-    public C2S_ServerRegister getDefaultInstanceForType() {
-      return defaultInstance;
+
+    public interface C2S_ServerRegisterOrBuilder extends com.google.protobuf.MessageOrBuilder
+    {
+
+        // required int32 serverType = 1;
+        boolean hasServerType();
+
+        int getServerType();
+
+        // required int32 serverId = 2;
+        boolean hasServerId();
+
+        int getServerId();
     }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_fieldAccessorTable;
-    }
-    
-    private int bitField0_;
-    // required int32 serverType = 1;
-    public static final int SERVERTYPE_FIELD_NUMBER = 1;
-    private int serverType_;
-    public boolean hasServerType() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
-    }
-    public int getServerType() {
-      return serverType_;
-    }
-    
-    // required int32 serverId = 2;
-    public static final int SERVERID_FIELD_NUMBER = 2;
-    private int serverId_;
-    public boolean hasServerId() {
-      return ((bitField0_ & 0x00000002) == 0x00000002);
-    }
-    public int getServerId() {
-      return serverId_;
-    }
-    
-    private void initFields() {
-      serverType_ = 0;
-      serverId_ = 0;
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      if (!hasServerType()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasServerId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+
+    public static final class C2S_ServerRegister extends com.google.protobuf.GeneratedMessage
+            implements C2S_ServerRegisterOrBuilder
+    {
+        // Use C2S_ServerRegister.newBuilder() to construct.
+        private C2S_ServerRegister(Builder builder) {
+            super(builder);
+        }
+
+        private C2S_ServerRegister(boolean noInit) {
+        }
+
+        private static final C2S_ServerRegister defaultInstance;
+
+        public static C2S_ServerRegister getDefaultInstance() {
+            return defaultInstance;
+        }
+
+        public C2S_ServerRegister getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+            return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_fieldAccessorTable;
+        }
+
+        private int bitField0_;
+        // required int32 serverType = 1;
+        public static final int SERVERTYPE_FIELD_NUMBER = 1;
+        private int serverType_;
+
+        public boolean hasServerType() {
+            return ((bitField0_ & 0x00000001) == 0x00000001);
+        }
+
+        public int getServerType() {
+            return serverType_;
+        }
+
+        // required int32 serverId = 2;
+        public static final int SERVERID_FIELD_NUMBER = 2;
+        private int serverId_;
+
+        public boolean hasServerId() {
+            return ((bitField0_ & 0x00000002) == 0x00000002);
+        }
+
+        public int getServerId() {
+            return serverId_;
+        }
+
+        private void initFields() {
+            serverType_ = 0;
+            serverId_ = 0;
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized != -1)
+                return isInitialized == 1;
+
+            if (!hasServerType()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            if (!hasServerId()) {
+                memoizedIsInitialized = 0;
+                return false;
+            }
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            getSerializedSize();
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                output.writeInt32(1, serverType_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                output.writeInt32(2, serverId_);
+            }
+            getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(1, serverType_);
+            }
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
+                size += com.google.protobuf.CodedOutputStream.computeInt32Size(2, serverId_);
+            }
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+
+        @java.lang.Override
+        protected java.lang.Object writeReplace() throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
                         throws java.io.IOException {
-      getSerializedSize();
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeInt32(1, serverType_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        output.writeInt32(2, serverId_);
-      }
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, serverType_);
-      }
-      if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(2, serverId_);
-      }
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-    
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegisterOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_fieldAccessorTable;
-      }
-      
-      // Construct using com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
         }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        serverType_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        serverId_ = 0;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.getDescriptor();
-      }
-      
-      public com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister getDefaultInstanceForType() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.getDefaultInstance();
-      }
-      
-      public com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister build() {
-        com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
         }
-        return result;
-      }
-      
-      private com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
         }
-        return result;
-      }
-      
-      public com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister buildPartial() {
-        com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister result = new com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister(this);
-        int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
-          to_bitField0_ |= 0x00000001;
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
         }
-        result.serverType_ = serverType_;
-        if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
-          to_bitField0_ |= 0x00000002;
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws java.io.IOException {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
         }
-        result.serverId_ = serverId_;
-        result.bitField0_ = to_bitField0_;
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister) {
-          return mergeFrom((com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
+
+        public static Builder newBuilder() {
+            return Builder.create();
         }
-      }
-      
-      public Builder mergeFrom(com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister other) {
-        if (other == com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.getDefaultInstance()) return this;
-        if (other.hasServerType()) {
-          setServerType(other.getServerType());
+
+        public Builder newBuilderForType() {
+            return newBuilder();
         }
-        if (other.hasServerId()) {
-          setServerId(other.getServerId());
+
+        public static Builder newBuilder(
+                com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister prototype) {
+            return newBuilder().mergeFrom(prototype);
         }
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        if (!hasServerType()) {
-          
-          return false;
+
+        public Builder toBuilder() {
+            return newBuilder(this);
         }
-        if (!hasServerId()) {
-          
-          return false;
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
         }
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
+
+        public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
+                implements com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegisterOrBuilder
+        {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_C2S_ServerRegister_fieldAccessorTable;
+            }
+
+            // Construct using
+            // com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            public Builder clear() {
+                super.clear();
+                serverType_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000001);
+                serverId_ = 0;
+                bitField0_ = (bitField0_ & ~0x00000002);
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.getDescriptor();
+            }
+
+            public com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister getDefaultInstanceForType() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.getDefaultInstance();
+            }
+
+            public com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister build() {
+                com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            private com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister buildParsed()
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result).asInvalidProtocolBufferException();
+                }
+                return result;
+            }
+
+            public com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister buildPartial() {
+                com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister result = new com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister(
+                        this);
+                int from_bitField0_ = bitField0_;
+                int to_bitField0_ = 0;
+                if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
+                    to_bitField0_ |= 0x00000001;
+                }
+                result.serverType_ = serverType_;
+                if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+                    to_bitField0_ |= 0x00000002;
+                }
+                result.serverId_ = serverId_;
+                result.bitField0_ = to_bitField0_;
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister) {
+                    return mergeFrom((com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister other) {
+                if (other == com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.getDefaultInstance())
+                    return this;
+                if (other.hasServerType()) {
+                    setServerType(other.getServerType());
+                }
+                if (other.hasServerId()) {
+                    setServerId(other.getServerId());
+                }
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                if (!hasServerType()) {
+
+                    return false;
+                }
+                if (!hasServerId()) {
+
+                    return false;
+                }
+                return true;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                        .newBuilder(this.getUnknownFields());
+                while (true) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        this.setUnknownFields(unknownFields.build());
+                        onChanged();
+                        return this;
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            this.setUnknownFields(unknownFields.build());
+                            onChanged();
+                            return this;
+                        }
+                        break;
+                    }
+                    case 8: {
+                        bitField0_ |= 0x00000001;
+                        serverType_ = input.readInt32();
+                        break;
+                    }
+                    case 16: {
+                        bitField0_ |= 0x00000002;
+                        serverId_ = input.readInt32();
+                        break;
+                    }
+                    }
+                }
+            }
+
+            private int bitField0_;
+
+            // required int32 serverType = 1;
+            private int serverType_;
+
+            public boolean hasServerType() {
+                return ((bitField0_ & 0x00000001) == 0x00000001);
+            }
+
+            public int getServerType() {
+                return serverType_;
+            }
+
+            public Builder setServerType(int value) {
+                bitField0_ |= 0x00000001;
+                serverType_ = value;
                 onChanged();
                 return this;
-              }
-              break;
             }
-            case 8: {
-              bitField0_ |= 0x00000001;
-              serverType_ = input.readInt32();
-              break;
-            }
-            case 16: {
-              bitField0_ |= 0x00000002;
-              serverId_ = input.readInt32();
-              break;
-            }
-          }
-        }
-      }
-      
-      private int bitField0_;
-      
-      // required int32 serverType = 1;
-      private int serverType_ ;
-      public boolean hasServerType() {
-        return ((bitField0_ & 0x00000001) == 0x00000001);
-      }
-      public int getServerType() {
-        return serverType_;
-      }
-      public Builder setServerType(int value) {
-        bitField0_ |= 0x00000001;
-        serverType_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearServerType() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        serverType_ = 0;
-        onChanged();
-        return this;
-      }
-      
-      // required int32 serverId = 2;
-      private int serverId_ ;
-      public boolean hasServerId() {
-        return ((bitField0_ & 0x00000002) == 0x00000002);
-      }
-      public int getServerId() {
-        return serverId_;
-      }
-      public Builder setServerId(int value) {
-        bitField0_ |= 0x00000002;
-        serverId_ = value;
-        onChanged();
-        return this;
-      }
-      public Builder clearServerId() {
-        bitField0_ = (bitField0_ & ~0x00000002);
-        serverId_ = 0;
-        onChanged();
-        return this;
-      }
-      
-      // @@protoc_insertion_point(builder_scope:C2S_ServerRegister)
-    }
-    
-    static {
-      defaultInstance = new C2S_ServerRegister(true);
-      defaultInstance.initFields();
-    }
-    
-    // @@protoc_insertion_point(class_scope:C2S_ServerRegister)
-  }
-  
-  public interface S2C_ServerRegisterOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
-  }
-  public static final class S2C_ServerRegister extends
-      com.google.protobuf.GeneratedMessage
-      implements S2C_ServerRegisterOrBuilder {
-    // Use S2C_ServerRegister.newBuilder() to construct.
-    private S2C_ServerRegister(Builder builder) {
-      super(builder);
-    }
-    private S2C_ServerRegister(boolean noInit) {}
-    
-    private static final S2C_ServerRegister defaultInstance;
-    public static S2C_ServerRegister getDefaultInstance() {
-      return defaultInstance;
-    }
-    
-    public S2C_ServerRegister getDefaultInstanceForType() {
-      return defaultInstance;
-    }
-    
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_descriptor;
-    }
-    
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_fieldAccessorTable;
-    }
-    
-    private void initFields() {
-    }
-    private byte memoizedIsInitialized = -1;
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized != -1) return isInitialized == 1;
-      
-      memoizedIsInitialized = 1;
-      return true;
-    }
-    
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      getSerializedSize();
-      getUnknownFields().writeTo(output);
-    }
-    
-    private int memoizedSerializedSize = -1;
-    public int getSerializedSize() {
-      int size = memoizedSerializedSize;
-      if (size != -1) return size;
-    
-      size = 0;
-      size += getUnknownFields().getSerializedSize();
-      memoizedSerializedSize = size;
-      return size;
-    }
-    
-    private static final long serialVersionUID = 0L;
-    @java.lang.Override
-    protected java.lang.Object writeReplace()
-        throws java.io.ObjectStreamException {
-      return super.writeReplace();
-    }
-    
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return newBuilder().mergeFrom(data, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      Builder builder = newBuilder();
-      if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
-        return builder.buildParsed();
-      } else {
-        return null;
-      }
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input).buildParsed();
-    }
-    public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return newBuilder().mergeFrom(input, extensionRegistry)
-               .buildParsed();
-    }
-    
-    public static Builder newBuilder() { return Builder.create(); }
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister prototype) {
-      return newBuilder().mergeFrom(prototype);
-    }
-    public Builder toBuilder() { return newBuilder(this); }
-    
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
-       implements com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegisterOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_descriptor;
-      }
-      
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_fieldAccessorTable;
-      }
-      
-      // Construct using com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-      
-      private Builder(BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
-        }
-      }
-      private static Builder create() {
-        return new Builder();
-      }
-      
-      public Builder clear() {
-        super.clear();
-        return this;
-      }
-      
-      public Builder clone() {
-        return create().mergeFrom(buildPartial());
-      }
-      
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.getDescriptor();
-      }
-      
-      public com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister getDefaultInstanceForType() {
-        return com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.getDefaultInstance();
-      }
-      
-      public com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister build() {
-        com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-      
-      private com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(
-            result).asInvalidProtocolBufferException();
-        }
-        return result;
-      }
-      
-      public com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister buildPartial() {
-        com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister result = new com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister(this);
-        onBuilt();
-        return result;
-      }
-      
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister) {
-          return mergeFrom((com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-      
-      public Builder mergeFrom(com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister other) {
-        if (other == com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.getDefaultInstance()) return this;
-        this.mergeUnknownFields(other.getUnknownFields());
-        return this;
-      }
-      
-      public final boolean isInitialized() {
-        return true;
-      }
-      
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
-            this.getUnknownFields());
-        while (true) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              this.setUnknownFields(unknownFields.build());
-              onChanged();
-              return this;
-            default: {
-              if (!parseUnknownField(input, unknownFields,
-                                     extensionRegistry, tag)) {
-                this.setUnknownFields(unknownFields.build());
+
+            public Builder clearServerType() {
+                bitField0_ = (bitField0_ & ~0x00000001);
+                serverType_ = 0;
                 onChanged();
                 return this;
-              }
-              break;
             }
-          }
+
+            // required int32 serverId = 2;
+            private int serverId_;
+
+            public boolean hasServerId() {
+                return ((bitField0_ & 0x00000002) == 0x00000002);
+            }
+
+            public int getServerId() {
+                return serverId_;
+            }
+
+            public Builder setServerId(int value) {
+                bitField0_ |= 0x00000002;
+                serverId_ = value;
+                onChanged();
+                return this;
+            }
+
+            public Builder clearServerId() {
+                bitField0_ = (bitField0_ & ~0x00000002);
+                serverId_ = 0;
+                onChanged();
+                return this;
+            }
+
+            // @@protoc_insertion_point(builder_scope:C2S_ServerRegister)
         }
-      }
-      
-      
-      // @@protoc_insertion_point(builder_scope:S2C_ServerRegister)
+
+        static {
+            defaultInstance = new C2S_ServerRegister(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:C2S_ServerRegister)
     }
-    
+
+    public interface S2C_ServerRegisterOrBuilder extends com.google.protobuf.MessageOrBuilder
+    {
+    }
+
+    public static final class S2C_ServerRegister extends com.google.protobuf.GeneratedMessage
+            implements S2C_ServerRegisterOrBuilder
+    {
+        // Use S2C_ServerRegister.newBuilder() to construct.
+        private S2C_ServerRegister(Builder builder) {
+            super(builder);
+        }
+
+        private S2C_ServerRegister(boolean noInit) {
+        }
+
+        private static final S2C_ServerRegister defaultInstance;
+
+        public static S2C_ServerRegister getDefaultInstance() {
+            return defaultInstance;
+        }
+
+        public S2C_ServerRegister getDefaultInstanceForType() {
+            return defaultInstance;
+        }
+
+        public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+            return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_descriptor;
+        }
+
+        protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+            return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_fieldAccessorTable;
+        }
+
+        private void initFields() {
+        }
+
+        private byte memoizedIsInitialized = -1;
+
+        public final boolean isInitialized() {
+            byte isInitialized = memoizedIsInitialized;
+            if (isInitialized != -1)
+                return isInitialized == 1;
+
+            memoizedIsInitialized = 1;
+            return true;
+        }
+
+        public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
+            getSerializedSize();
+            getUnknownFields().writeTo(output);
+        }
+
+        private int memoizedSerializedSize = -1;
+
+        public int getSerializedSize() {
+            int size = memoizedSerializedSize;
+            if (size != -1)
+                return size;
+
+            size = 0;
+            size += getUnknownFields().getSerializedSize();
+            memoizedSerializedSize = size;
+            return size;
+        }
+
+        private static final long serialVersionUID = 0L;
+
+        @java.lang.Override
+        protected java.lang.Object writeReplace() throws java.io.ObjectStreamException {
+            return super.writeReplace();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
+                com.google.protobuf.ByteString data) throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
+                com.google.protobuf.ByteString data, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(byte[] data)
+                throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(byte[] data,
+                com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws com.google.protobuf.InvalidProtocolBufferException {
+            return newBuilder().mergeFrom(data, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws java.io.IOException {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseDelimitedFrom(
+                java.io.InputStream input) throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseDelimitedFrom(
+                java.io.InputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws java.io.IOException {
+            Builder builder = newBuilder();
+            if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
+                return builder.buildParsed();
+            } else {
+                return null;
+            }
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
+                com.google.protobuf.CodedInputStream input) throws java.io.IOException {
+            return newBuilder().mergeFrom(input).buildParsed();
+        }
+
+        public static com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister parseFrom(
+                com.google.protobuf.CodedInputStream input, com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+                        throws java.io.IOException {
+            return newBuilder().mergeFrom(input, extensionRegistry).buildParsed();
+        }
+
+        public static Builder newBuilder() {
+            return Builder.create();
+        }
+
+        public Builder newBuilderForType() {
+            return newBuilder();
+        }
+
+        public static Builder newBuilder(
+                com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister prototype) {
+            return newBuilder().mergeFrom(prototype);
+        }
+
+        public Builder toBuilder() {
+            return newBuilder(this);
+        }
+
+        @java.lang.Override
+        protected Builder newBuilderForType(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+            Builder builder = new Builder(parent);
+            return builder;
+        }
+
+        public static final class Builder extends com.google.protobuf.GeneratedMessage.Builder<Builder>
+                implements com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegisterOrBuilder
+        {
+            public static final com.google.protobuf.Descriptors.Descriptor getDescriptor() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_descriptor;
+            }
+
+            protected com.google.protobuf.GeneratedMessage.FieldAccessorTable internalGetFieldAccessorTable() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.internal_static_S2C_ServerRegister_fieldAccessorTable;
+            }
+
+            // Construct using
+            // com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.newBuilder()
+            private Builder() {
+                maybeForceBuilderInitialization();
+            }
+
+            private Builder(BuilderParent parent) {
+                super(parent);
+                maybeForceBuilderInitialization();
+            }
+
+            private void maybeForceBuilderInitialization() {
+                if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+                }
+            }
+
+            private static Builder create() {
+                return new Builder();
+            }
+
+            public Builder clear() {
+                super.clear();
+                return this;
+            }
+
+            public Builder clone() {
+                return create().mergeFrom(buildPartial());
+            }
+
+            public com.google.protobuf.Descriptors.Descriptor getDescriptorForType() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.getDescriptor();
+            }
+
+            public com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister getDefaultInstanceForType() {
+                return com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.getDefaultInstance();
+            }
+
+            public com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister build() {
+                com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result);
+                }
+                return result;
+            }
+
+            private com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister buildParsed()
+                    throws com.google.protobuf.InvalidProtocolBufferException {
+                com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister result = buildPartial();
+                if (!result.isInitialized()) {
+                    throw newUninitializedMessageException(result).asInvalidProtocolBufferException();
+                }
+                return result;
+            }
+
+            public com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister buildPartial() {
+                com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister result = new com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister(
+                        this);
+                onBuilt();
+                return result;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.Message other) {
+                if (other instanceof com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister) {
+                    return mergeFrom((com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister) other);
+                } else {
+                    super.mergeFrom(other);
+                    return this;
+                }
+            }
+
+            public Builder mergeFrom(com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister other) {
+                if (other == com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.getDefaultInstance())
+                    return this;
+                this.mergeUnknownFields(other.getUnknownFields());
+                return this;
+            }
+
+            public final boolean isInitialized() {
+                return true;
+            }
+
+            public Builder mergeFrom(com.google.protobuf.CodedInputStream input,
+                    com.google.protobuf.ExtensionRegistryLite extensionRegistry) throws java.io.IOException {
+                com.google.protobuf.UnknownFieldSet.Builder unknownFields = com.google.protobuf.UnknownFieldSet
+                        .newBuilder(this.getUnknownFields());
+                while (true) {
+                    int tag = input.readTag();
+                    switch (tag) {
+                    case 0:
+                        this.setUnknownFields(unknownFields.build());
+                        onChanged();
+                        return this;
+                    default: {
+                        if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
+                            this.setUnknownFields(unknownFields.build());
+                            onChanged();
+                            return this;
+                        }
+                        break;
+                    }
+                    }
+                }
+            }
+
+            // @@protoc_insertion_point(builder_scope:S2C_ServerRegister)
+        }
+
+        static {
+            defaultInstance = new S2C_ServerRegister(true);
+            defaultInstance.initFields();
+        }
+
+        // @@protoc_insertion_point(class_scope:S2C_ServerRegister)
+    }
+
+    private static com.google.protobuf.Descriptors.Descriptor internal_static_C2S_ServerRegister_descriptor;
+    private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_C2S_ServerRegister_fieldAccessorTable;
+    private static com.google.protobuf.Descriptors.Descriptor internal_static_S2C_ServerRegister_descriptor;
+    private static com.google.protobuf.GeneratedMessage.FieldAccessorTable internal_static_S2C_ServerRegister_fieldAccessorTable;
+
+    public static com.google.protobuf.Descriptors.FileDescriptor getDescriptor() {
+        return descriptor;
+    }
+
+    private static com.google.protobuf.Descriptors.FileDescriptor descriptor;
+
     static {
-      defaultInstance = new S2C_ServerRegister(true);
-      defaultInstance.initFields();
+        java.lang.String[] descriptorData = { "\n\024ServerRegister.proto\":\n\022C2S_ServerRegi"
+                + "ster\022\022\n\nserverType\030\001 \002(\005\022\020\n\010serverId\030\002 \002"
+                + "(\005\"\024\n\022S2C_ServerRegisterB5\n\036com.fire.gat"
+                + "e.handler.privatesB\023ServerRegisterProto" };
+        com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner = new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+            public com.google.protobuf.ExtensionRegistry assignDescriptors(
+                    com.google.protobuf.Descriptors.FileDescriptor root) {
+                descriptor = root;
+                internal_static_C2S_ServerRegister_descriptor = getDescriptor().getMessageTypes().get(0);
+                internal_static_C2S_ServerRegister_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                        internal_static_C2S_ServerRegister_descriptor,
+                        new java.lang.String[] { "ServerType", "ServerId", },
+                        com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.class,
+                        com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.Builder.class);
+                internal_static_S2C_ServerRegister_descriptor = getDescriptor().getMessageTypes().get(1);
+                internal_static_S2C_ServerRegister_fieldAccessorTable = new com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+                        internal_static_S2C_ServerRegister_descriptor, new java.lang.String[] {},
+                        com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.class,
+                        com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.Builder.class);
+                return null;
+            }
+        };
+        com.google.protobuf.Descriptors.FileDescriptor.internalBuildGeneratedFileFrom(descriptorData,
+                new com.google.protobuf.Descriptors.FileDescriptor[] {}, assigner);
     }
-    
-    // @@protoc_insertion_point(class_scope:S2C_ServerRegister)
-  }
-  
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_C2S_ServerRegister_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_C2S_ServerRegister_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_S2C_ServerRegister_descriptor;
-  private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_S2C_ServerRegister_fieldAccessorTable;
-  
-  public static com.google.protobuf.Descriptors.FileDescriptor
-      getDescriptor() {
-    return descriptor;
-  }
-  private static com.google.protobuf.Descriptors.FileDescriptor
-      descriptor;
-  static {
-    java.lang.String[] descriptorData = {
-      "\n\024ServerRegister.proto\":\n\022C2S_ServerRegi" +
-      "ster\022\022\n\nserverType\030\001 \002(\005\022\020\n\010serverId\030\002 \002" +
-      "(\005\"\024\n\022S2C_ServerRegisterB5\n\036com.fire.gat" +
-      "e.handler.privatesB\023ServerRegisterProto"
-    };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
-          descriptor = root;
-          internal_static_C2S_ServerRegister_descriptor =
-            getDescriptor().getMessageTypes().get(0);
-          internal_static_C2S_ServerRegister_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_C2S_ServerRegister_descriptor,
-              new java.lang.String[] { "ServerType", "ServerId", },
-              com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.class,
-              com.fire.gate.handler.privates.ServerRegisterProto.C2S_ServerRegister.Builder.class);
-          internal_static_S2C_ServerRegister_descriptor =
-            getDescriptor().getMessageTypes().get(1);
-          internal_static_S2C_ServerRegister_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_S2C_ServerRegister_descriptor,
-              new java.lang.String[] { },
-              com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.class,
-              com.fire.gate.handler.privates.ServerRegisterProto.S2C_ServerRegister.Builder.class);
-          return null;
-        }
-      };
-    com.google.protobuf.Descriptors.FileDescriptor
-      .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
-  }
-  
-  // @@protoc_insertion_point(outer_class_scope)
+
+    // @@protoc_insertion_point(outer_class_scope)
 }

@@ -3,6 +3,7 @@
  */
 package com.fire.gate.net.privates;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -33,10 +34,8 @@ public class PrivateDispatchHandler implements PrivateHandler, Component
     // <指令，处理器>
     private Map<Short, PrivateHandler> handlerMap;
 
-    @Override
-    public void start() throws Exception {
-        loadHandler(Config.getString("PRIVATE_HANDLER_SCAN_PACKAGES"));
-        LOG.debug("PrivateDispatchHandler start");
+    public PrivateDispatchHandler() {
+        handlerMap = new HashMap<>();
     }
 
     @Override
@@ -53,6 +52,12 @@ public class PrivateDispatchHandler implements PrivateHandler, Component
                 LOG.warn("Lose connection with user {}, can not forwarding response packet", packet.uid);
             }
         }
+    }
+
+    @Override
+    public void start() throws Exception {
+        loadHandler(Config.getString("PRIVATE_HANDLER_SCAN_PACKAGES"));
+        LOG.debug("PrivateDispatchHandler start");
     }
 
     /**

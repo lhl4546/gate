@@ -40,7 +40,7 @@ public class PrivateServer implements Component
      * @param dispatcher 消息派发处理器
      */
     public PrivateServer(PrivateDispatchHandler dispatcher) {
-        this.port = Config.getInt("TCP_PORT");
+        this.port = Config.getInt("PRIVATE_PORT");
         this.bootstrap = new ServerBootstrap();
         this.bossgroup = new NioEventLoopGroup(1, new NamedThreadFactory("ACCEPTOR"));
         int netiothreads = Runtime.getRuntime().availableProcessors();
@@ -55,7 +55,7 @@ public class PrivateServer implements Component
                 .childOption(ChannelOption.TCP_NODELAY, true);
         ChannelFuture future = bootstrap.bind(port);
         serverSocket = future.sync().channel();
-        LOG.debug("NettyServer start listen on port {}", port);
+        LOG.debug("PrivateServer start listen on port {}", port);
     }
 
     private ChannelInitializer<Channel> getInitializer() {
@@ -73,6 +73,6 @@ public class PrivateServer implements Component
         if (childgroup != null) {
             childgroup.shutdownGracefully();
         }
-        LOG.debug("NettyServer stop");
+        LOG.debug("PrivateServer stop");
     }
 }
