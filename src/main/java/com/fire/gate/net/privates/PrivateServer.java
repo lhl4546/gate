@@ -44,7 +44,7 @@ public class PrivateServer implements Component
         this.bootstrap = new ServerBootstrap();
         this.bossgroup = new NioEventLoopGroup(1, new NamedThreadFactory("ACCEPTOR"));
         int netiothreads = Runtime.getRuntime().availableProcessors();
-        this.childgroup = new NioEventLoopGroup(netiothreads, new NamedThreadFactory("NET_IO"));
+        this.childgroup = new NioEventLoopGroup(netiothreads, new NamedThreadFactory("PRIVATE_NET_IO"));
         this.dispatcher = dispatcher;
     }
 

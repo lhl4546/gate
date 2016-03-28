@@ -46,7 +46,7 @@ public class PublicServer implements Component
         this.bootstrap = new ServerBootstrap();
         this.bossgroup = new NioEventLoopGroup(1, new NamedThreadFactory("ACCEPTOR"));
         int netiothreads = Runtime.getRuntime().availableProcessors();
-        this.childgroup = new NioEventLoopGroup(netiothreads, new NamedThreadFactory("NET_IO"));
+        this.childgroup = new NioEventLoopGroup(netiothreads, new NamedThreadFactory("PUBLIC_NET_IO"));
         this.dispatcher = dispatcher;
     }
 

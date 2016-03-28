@@ -9,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.handler.timeout.IdleState;
+import io.netty.handler.timeout.IdleStateEvent;
 
 /**
  * 服务器内部通信
@@ -28,17 +30,20 @@ public class PrivateInboundHandler extends SimpleChannelInboundHandler<PrivatePa
     }
 
     @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-    }
-
-    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         LOG.debug("{}", ctx.channel().remoteAddress(), cause);
         ctx.channel().close();
     }
 
     @Override
-    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        if (evt instanceof IdleStateEvent) {
+            IdleStateEvent idleEvent = (IdleStateEvent) evt;
+            if (idleEvent.state() == IdleState.WRITER_IDLE) {
+                LOG.debug("Write to {} idle, send ping message", ctx.channel().remoteAddress());
+                // TODO send ping message
+            }
+        }
     }
 
     @Override
