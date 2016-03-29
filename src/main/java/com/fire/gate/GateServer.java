@@ -10,6 +10,7 @@ import com.fire.gate.net.privates.PrivateDispatchHandler;
 import com.fire.gate.net.privates.PrivateServer;
 import com.fire.gate.net.publics.PublicDispatchHandler;
 import com.fire.gate.net.publics.PublicServer;
+import com.fire.gate.util.HttpUtil;
 
 /**
  * @author lhl
@@ -36,6 +37,7 @@ public class GateServer implements Component
     @Override
     public void start() {
         try {
+            HttpUtil.INSTANCE.start();
             privateDispatcher.start();
             privateServer.start();
             publicDispatcher.start();
@@ -63,6 +65,7 @@ public class GateServer implements Component
             publicDispatcher.stop();
             privateServer.stop();
             privateDispatcher.stop();
+            HttpUtil.INSTANCE.stop();
             LOG.debug("Gate server stop");
         } catch (Exception e) {
             LOG.error("Gate server stop failed", e);

@@ -3,84 +3,94 @@
  */
 package com.fire.gate.util;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.Objects;
+import java.io.IOException;
+
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.config.SocketConfig;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.util.EntityUtils;
+
+import com.fire.gate.Component;
 
 /**
+ * 基于Apache http client连接池实现的HTTP GET\POST方法
+ * 
  * @author lhl
  *
  *         2015年12月30日 下午2:41:08
  */
-final public class HttpUtil
+final public class HttpUtil implements Component
 {
+    private PoolingHttpClientConnectionManager clientPool;
+    private ResponseHandler<String> stringResponseHandler;
+
     private HttpUtil() {
+        initialize();
     }
 
-    private static final int HTTP_TIMEOUT_MS = 1000 * 20; // 连接或者读取超时
-
-    /**
-     * 发送HTTP GET请求
-     * 
-     * @param getUrl 请求url，附带get参数
-     * @return 应答消息
-     * @throws Exception
-     */
-    public static String GET(String getUrl) throws Exception {
-        Objects.requireNonNull(getUrl, "GET: getUrl 不能为空");
-
-        URL url = new URL(getUrl);
-        URLConnection conn = url.openConnection();
-        conn.setConnectTimeout(HTTP_TIMEOUT_MS);
-        conn.setReadTimeout(HTTP_TIMEOUT_MS);
-        conn.connect();
-
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
-            String line;
-            StringBuilder builder = new StringBuilder();
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
+    private void initialize() {
+        clientPool = new PoolingHttpClientConnectionManager();
+        stringResponseHandler = new ResponseHandler<String>() {
+            @Override
+            public String handleResponse(HttpResponse response) throws ClientProtocolException, IOException {
+                int status = response.getStatusLine().getStatusCode();
+                if (status >= 200 && status < 300) {
+                    HttpEntity entity = response.getEntity();
+                    return entity == null ? EntityUtils.toString(entity) : null;
+                } else {
+                    throw new ClientProtocolException("Unexpected response status: " + status);
+                }
             }
-            return builder.toString();
-        }
+        };
+    }
+
+    public static HttpUtil INSTANCE = new HttpUtil();
+
+    @Override
+    public void start() throws Exception {
+        clientPool.setMaxTotal(200);
+        clientPool.setDefaultMaxPerRoute(200);
+        SocketConfig socketConfig = SocketConfig.custom().setSoLinger(0).setTcpNoDelay(true).build();
+        clientPool.setDefaultSocketConfig(socketConfig);
+    }
+
+    @Override
+    public void stop() throws Exception {
+        clientPool.shutdown();
     }
 
     /**
-     * 发送HTTP POST请求，以(application/x-www-form-urlencoded)形式发送数据
      * 
-     * @param postUrl 请求url
-     * @param param post数据
-     * @return 应答，waitForReturn为false时直接返回null
-     * @throws Exception
+     * @param url
+     * @return
+     * @throws IOException
      */
-    public static String POST(String postUrl, byte[] param) throws Exception {
-        Objects.requireNonNull(postUrl, "POST: postUrl 不能为空");
-        Objects.requireNonNull(param, "POST: param 不能为空");
+    public static String GET(String url) throws IOException {
+        CloseableHttpClient httpClient = HttpClients.createMinimal(INSTANCE.clientPool);
+        HttpGet httpGet = new HttpGet(url);
+        return httpClient.execute(httpGet, INSTANCE.stringResponseHandler);
+    }
 
-        URL url = new URL(postUrl);
-        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-        conn.setDoOutput(true);
-        conn.setConnectTimeout(HTTP_TIMEOUT_MS);
-        conn.setReadTimeout(HTTP_TIMEOUT_MS);
-        conn.setRequestMethod("POST");
-        conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-        conn.setRequestProperty("Content-Length", String.valueOf(param.length));
-        try (OutputStream out = conn.getOutputStream()) {
-            out.write(param);
-            out.flush();
-        }
-
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
-            String line;
-            StringBuilder builder = new StringBuilder();
-            while ((line = reader.readLine()) != null) {
-                builder.append(line);
-            }
-            return builder.toString();
-        }
+    /**
+     * 
+     * @param url
+     * @param kvPairs
+     * @return
+     * @throws IOException
+     */
+    public static String POST(String url, String kvPairs) throws IOException {
+        CloseableHttpClient httpClient = HttpClients.createMinimal(INSTANCE.clientPool);
+        HttpPost httpPost = new HttpPost(url);
+        HttpEntity entity = new StringEntity(kvPairs);
+        httpPost.setEntity(entity);
+        return httpClient.execute(httpPost, INSTANCE.stringResponseHandler);
     }
 }
