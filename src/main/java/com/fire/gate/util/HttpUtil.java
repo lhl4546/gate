@@ -9,6 +9,7 @@ import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.config.SocketConfig;
@@ -31,12 +32,16 @@ final public class HttpUtil implements Component
 {
     private PoolingHttpClientConnectionManager clientPool;
     private ResponseHandler<String> stringResponseHandler;
+    private RequestConfig requestConfig;
 
     private HttpUtil() {
         initialize();
     }
 
     private void initialize() {
+        // 10秒连接超时，10秒连接池获取超时
+        requestConfig = RequestConfig.custom().setConnectTimeout(10 * 1000).setConnectionRequestTimeout(10 * 1000)
+                .build();
         clientPool = new PoolingHttpClientConnectionManager();
         stringResponseHandler = new ResponseHandler<String>() {
             @Override
@@ -76,6 +81,7 @@ final public class HttpUtil implements Component
     public static String GET(String url) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createMinimal(INSTANCE.clientPool);
         HttpGet httpGet = new HttpGet(url);
+        httpGet.setConfig(INSTANCE.requestConfig);
         return httpClient.execute(httpGet, INSTANCE.stringResponseHandler);
     }
 
@@ -89,6 +95,7 @@ final public class HttpUtil implements Component
     public static String POST(String url, String kvPairs) throws IOException {
         CloseableHttpClient httpClient = HttpClients.createMinimal(INSTANCE.clientPool);
         HttpPost httpPost = new HttpPost(url);
+        httpPost.setConfig(INSTANCE.requestConfig);
         HttpEntity entity = new StringEntity(kvPairs);
         httpPost.setEntity(entity);
         return httpClient.execute(httpPost, INSTANCE.stringResponseHandler);
